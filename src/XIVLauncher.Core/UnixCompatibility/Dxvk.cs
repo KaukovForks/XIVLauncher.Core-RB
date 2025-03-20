@@ -14,7 +14,7 @@ namespace XIVLauncher.Core.UnixCompatibility;
 
 public static class Dxvk
 {
-    public const string DEFAULT = "dxvk-2.5.1";
+    public const string DEFAULT = "dxvk-2.6";
 
     public static bool Enabled => Program.Config.DxvkVersion != "DISABLED";
 
@@ -79,10 +79,16 @@ public static class Dxvk
             {"name", "WineD3D"}, {"desc", "Use WineD3D (OpenGL) instead of DXVK. For old GPUs without Vulkan support."},
             {"label", "Disabled"}
         });
+        Versions.Add("dxvk-2.6", new Dictionary<string, string>()
+        {
+            {"name", "2.6"}, {"desc", "Official version 2.6 of DXVK."},
+            {"label", "Current"}, {"url", "https://github.com/doitsujin/dxvk/releases/download/v2.6/dxvk-2.6.tar.gz"},
+            {"mark", "Download"}
+        });
         Versions.Add("dxvk-2.5.3", new Dictionary<string, string>()
         {
             {"name", "2.5.3"}, {"desc", "Official version 2.5.3 of DXVK."},
-            {"label", "Current"}, {"url", "https://github.com/doitsujin/dxvk/releases/download/v2.5.3/dxvk-2.5.3.tar.gz"},
+            {"label", "Previous"}, {"url", "https://github.com/doitsujin/dxvk/releases/download/v2.5.3/dxvk-2.5.3.tar.gz"},
             {"mark", "Download"}
         });
         Versions.Add("dxvk-gplasync-v2.5.3-1", new Dictionary<string, string>()
@@ -94,7 +100,7 @@ public static class Dxvk
         Versions.Add("dxvk-2.2", new Dictionary<string, string>()
         {
             {"name", "2.2"}, {"desc", "Previous version, using Graphics Pipeline Libs. Use this if you have problems with ReShade Effects Toggler (REST)."},
-            {"label", "Previous"}, {"url", "https://github.com/doitsujin/dxvk/releases/download/v2.2/dxvk-2.2.tar.gz"},
+            {"label", "Old"}, {"url", "https://github.com/doitsujin/dxvk/releases/download/v2.2/dxvk-2.2.tar.gz"},
             {"mark", "Download" }
         });
         Versions.Add("dxvk-async-1.10.3", new Dictionary<string, string>()
